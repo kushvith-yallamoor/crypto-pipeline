@@ -1,0 +1,7 @@
+pandas
+yfinance
+ta==0.10.2
+numpy
+pymongo[srv]
+google-cloud-secret-manager
+functions-framework
