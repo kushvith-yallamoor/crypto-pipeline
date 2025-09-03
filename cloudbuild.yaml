@@ -31,9 +31,12 @@ steps:
       - '${_DEPLOY_REGION}'
       - '--platform'
       - 'managed'
-      - '--quiet' # Add this flag to prevent interactive prompts
+      - '--quiet'
     id: 'Deploy'
 
 # Store the built image in Artifact Registry
 images:
   - '${_DEPLOY_REGION}-docker.pkg.dev/${PROJECT_ID}/${_AR_REPOSITORY}/${_SERVICE_NAME}:${COMMIT_SHA}'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
