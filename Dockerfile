@@ -11,7 +11,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Set the environment variable for the port
 ENV PORT=8080
 
 ENTRYPOINT ["functions-framework", "--source=main.py", "--target=main", "--port=8080"]
